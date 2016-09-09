@@ -1,0 +1,374 @@
+* {
+ box-sizing: border-box;
+}
+
+/*removes all default css*/
+select, input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+body {
+ font-family: 'Quattrocento Sans', sans-serif;
+ margin: 0;
+}
+
+h1 {
+ color: #FFF;
+ margin: 0;
+}
+
+h2,
+legend {
+ color: #444;
+ font-weight: 700;
+ font-family: 'Tinos', serif;
+ font-size: 1.3em;
+}
+
+p {
+ line-height: 1.2;
+}
+
+label {
+ color: #555;
+}
+
+fieldset {
+ border: none;
+ margin: 0;
+ padding: 0;
+}
+
+input:placeholder-shown {
+ font-family: 'Lato', sans-serif;
+ text-align: right;
+ color: #aaa;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+.main-header {
+ font-family: 'Tinos', serif;
+ text-align: center;
+ margin-bottom: 3px;
+}
+
+.signup {
+ margin: 0 auto 3px;
+ width: 90%;
+}
+
+.main-header h1 {
+ background: #847587;
+ text-transform: uppercase;
+ padding: 20px 0;
+ font-size: 1.2em;
+}
+
+.main-header h2 {
+ margin: 25px 0 12px;
+}
+
+.main-header p {
+ color: #aaa;
+ font-family: 'Quattrocento Sans', sans-serif;
+ margin: 0;
+ border-bottom: 4px solid #758787;
+ padding-bottom: 20px;
+ min-height: 55px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+textarea,
+select {
+ border: none;
+ font-size: 16px;
+ height: auto;
+ padding: 15px;
+ width: 100%;
+ background-color: #e8eeef;
+ color: #444;
+ margin-bottom: 30px;
+ margin-top: 8px;
+ border-radius: 5px;
+ outline: none;
+}
+
+input[type="number"] {
+ width: 50%;
+ display: block;
+}
+
+/*allows color to fade to darker when an input is focused on*/
+input:focus {
+ background: #cdd4d4;
+ transition-property: background-color;
+ transition-duration: 1.5s;
+ transition-timing-function: ease;
+}
+
+select {
+ color: #aaa;
+ cursor: pointer;
+ /*added new arrows since removed all default css*/
+ background-image: url(../images/arrows.svg);
+ background-repeat: no-repeat;
+ background-position: right center;
+ background-size: 20px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+ background: #e8eeef;
+ width: 17px;
+ height: 17px;
+ margin-top: 13px;
+ margin-right: 8px;
+ border-radius: 3px;
+ cursor: pointer;
+ outline: 0;
+ padding: 5px;
+}
+
+input[type="radio"] {
+ border-radius: 50%;
+}
+
+input[type="checkbox"]:checked {
+ background-image: url(../images/checkmark.svg);
+ border: inset 2px #00417f;
+ outline: 0;
+}
+
+input[type="radio"]:checked {
+ background-image: url(../images/dot.svg);
+ border: inset 2px #00417f;
+ border-radius: 50%;
+ outline: 0;
+}
+
+.radio {
+ margin: 25px 0 30px;
+}
+
+.contact,
+.newsletter,
+.survey {
+ margin: 0 auto;
+ border-top: 2px solid #758787;
+ width: 90%;
+}
+
+.contact legend,
+.newsletter legend,
+.survey legend {
+ padding: 25px 0 25px;
+ width: 90%;
+}
+
+.survey {
+ margin-top: 30px;
+ margin-bottom: 30px;
+}
+
+label[for="message"],
+label[for="job-title"],
+label[for="survey"]{
+ margin-left: 5%;
+}
+
+.newsletter label{
+ margin-bottom: 9px;
+}
+
+#message,
+#job-title {
+ margin: 15px auto 30px;
+ width: 90%;
+ display: block;
+}
+
+button {
+ font-family: 'Tinos', serif;
+ font-size: 1.2em;
+ background: #e18674;
+ padding: 19px 39px 18px 39px;
+ color: #FFF;
+ text-align: center;
+ border-radius: 5px;
+ width: 90%;
+ margin: 25px auto;
+ border-style: none;
+ display: block;
+ cursor: pointer;
+ outline: none;
+}
+ 
+.main-footer {
+ text-align: center;
+ color: #bbb;
+ padding-bottom: 200px;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+
+@media (min-width: 760px) {
+
+.signup {
+ margin-bottom: 3px;
+ width: 74%;
+}
+
+.main-header h2 {
+ margin: 50px auto 0;
+ font-size: 1.6rem;
+}
+
+.main-header p {
+ padding-bottom: 40px;
+ padding-top: 10px;
+}
+
+label {
+ display: inline-block;
+ text-align: left;
+ width: 20%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+ display: inline-block;
+ width: 79%;
+}
+
+input[type="number"] {
+ display: inline;
+ width: 30%;
+ margin-bottom: 50px;
+}
+
+.contact,
+.newsletter,
+.survey {
+ margin: 0 auto;
+ width: 74%;
+}
+
+.survey {
+ margin-bottom: 30px;
+}
+
+.contact legend,
+.newsletter legend {
+ padding-top: 25px;
+}
+
+.newsletter label,
+.survey label {
+ width: 80%;
+ display: inline;
+}
+
+button,
+#message,
+#job-title,
+.survey {
+ width: 75%;
+}
+
+button {
+ margin-top: 15px;
+}
+
+label[for="message"],
+label[for="job-title"] {
+ margin-left: 12.5%;
+ width: 75%;
+}
+
+}
+ 
+@media (min-width: 1024px) {
+
+.signup {
+ width: 55%;
+}
+
+.main-header h2 {
+ font-size: 1.75rem;
+}
+
+.main-header p {
+ margin: 15px auto 0;
+ font-size: 1.1rem;
+ padding-top: 0;
+ padding-bottom: 45px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+ width: 79%;
+ margin: 12px 0;
+}
+
+input[type="number"] {
+ width: 25%;
+}
+
+.contact,
+.newsletter,
+.survey {
+ margin: 0 auto;
+ width: 55%;
+}
+
+.survey {
+ margin-bottom: 30px;
+}
+
+button,
+#message,
+#job-title {
+ width: 55%;
+}
+
+button {
+ margin-bottom: 50px;
+}
+
+label[for="message"],
+label[for="job-title"] {
+ margin-left: 22.5%;
+}
+
+
+}
+
+
+	/* ---- Float clearfix ---- */
+
+.clearfix::after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+
