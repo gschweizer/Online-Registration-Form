@@ -119,7 +119,6 @@ input:focus {
 }
 
 select {
- color: #aaa;
  cursor: pointer;
  /*added new arrows since removed all default css*/
  background-image: url(../images/arrows.svg);
